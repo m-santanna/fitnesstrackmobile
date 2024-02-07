@@ -8,6 +8,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       {page === 'landing' && <LandingPage setPage={setPage} />}
+      {page === 'dashboard' && <LandingPage setPage={setPage} />}
       <StatusBar style="auto" />
     </SafeAreaView>
   )

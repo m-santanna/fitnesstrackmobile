@@ -3,9 +3,9 @@ import { View, Text, Pressable } from 'react-native'
 const LandingPage = ({ setPage }) => {
   return (
     <View>
-      <Text>Welcome to FitnessTrack!</Text>
-      <Pressable onPress={() => setPage('dashboard')}>
-        <Text>Go to Vapo</Text>
+      <Text>Dashboard!</Text>
+      <Pressable onPress={() => setPage('main')}>
+        <Text>Main</Text>
       </Pressable>
     </View>
   )
