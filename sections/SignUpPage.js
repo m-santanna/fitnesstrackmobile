@@ -1,5 +1,6 @@
-import React from 'react'
-import { TextInput } from 'react-native'
+import React, { useState } from 'react'
+import { View, Text, Pressable, TextInput } from 'react-native'
+import { loginStyles } from '../globals'
 
 const SignUpPage = ({ setPage }) => {
 	const [username, setUsername] = useState('')
@@ -34,6 +35,9 @@ const SignUpPage = ({ setPage }) => {
 			</Pressable>
 			<Pressable style={styles.button} onPress={() => setPage('login')}>
 				<Text style={styles.buttonText}>Wait, I have an account</Text>
+			</Pressable>
+			<Pressable style={styles.button} onPress={() => setPage('landing')}>
+				<Text style={styles.buttonText}>Go to menu!</Text>
 			</Pressable>
 		</View>
 	)

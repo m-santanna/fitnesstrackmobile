@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { View, Text, Pressable, TextInput } from 'react-native'
+import { loginStyles } from '../globals'
 
 const LoginPage = ({ setPage }) => {
 	const [username, setUsername] = useState('')

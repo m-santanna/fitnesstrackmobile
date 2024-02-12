@@ -1,4 +1,5 @@
 import { View, Text, Pressable } from 'react-native'
+import styles from '../globals'
 
 const LandingPage = ({ setPage }) => {
 	return (
