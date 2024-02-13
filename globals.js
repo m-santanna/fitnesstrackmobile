@@ -51,4 +51,4 @@ export const landingStyles = StyleSheet.create({
 	},
 })
 
-export const loginStyles = StyleSheet.create({})
+export const authStyles = StyleSheet.create({})

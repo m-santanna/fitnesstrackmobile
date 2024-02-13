@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { View, Text, Pressable, TextInput } from 'react-native'
-import { loginStyles } from '../globals'
+import { authStyles } from '../globals'
 
 const SignUpPage = ({ setPage }) => {
 	const [username, setUsername] = useState('')
@@ -16,28 +16,28 @@ const SignUpPage = ({ setPage }) => {
 				placeholder="Username"
 				onChangeText={setUsername}
 				value={username}
-				style={styles.textInput}
+				style={authStyles.textInput}
 			/>
 			<TextInput
 				placeholder="Password"
 				onChangeText={setPassword}
 				value={password}
-				style={styles.textInput}
+				style={authStyles.textInput}
 			/>
 			<TextInput
 				placeholder="Confirm Password"
 				onChangeText={setConfirmPassword}
 				value={confirmPassword}
-				style={styles.textInput}
+				style={authStyles.textInput}
 			/>
-			<Pressable style={styles.button} onPress={signUp}>
-				<Text style={styles.buttonText}>Sign up</Text>
+			<Pressable style={authStyles.button} onPress={signUp}>
+				<Text style={authStyles.buttonText}>Sign up</Text>
 			</Pressable>
-			<Pressable style={styles.button} onPress={() => setPage('login')}>
-				<Text style={styles.buttonText}>Wait, I have an account</Text>
+			<Pressable style={authStyles.button} onPress={() => setPage('login')}>
+				<Text style={authStyles.buttonText}>Wait, I have an account</Text>
 			</Pressable>
-			<Pressable style={styles.button} onPress={() => setPage('landing')}>
-				<Text style={styles.buttonText}>Go to menu!</Text>
+			<Pressable style={authStyles.button} onPress={() => setPage('landing')}>
+				<Text style={authStyles.buttonText}>Go to menu!</Text>
 			</Pressable>
 		</View>
 	)

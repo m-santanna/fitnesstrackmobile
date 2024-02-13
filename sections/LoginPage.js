@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { View, Text, Pressable, TextInput } from 'react-native'
-import { loginStyles } from '../globals'
+import { authStyles } from '../globals'
 
 const LoginPage = ({ setPage }) => {
 	const [username, setUsername] = useState('')
@@ -10,30 +10,30 @@ const LoginPage = ({ setPage }) => {
 	}
 	return (
 		<View>
-			<Text style={styles.text}>Log in</Text>
+			<Text style={authStyles.text}>Log in</Text>
 			<View>
 				<TextInput
 					placeholder="Username"
 					onChangeText={setUsername}
 					value={username}
-					style={styles.textInput}
+					style={authStyles.textInput}
 				/>
 				<TextInput
 					placeholder="Password"
 					onChangeText={setPassword}
 					value={password}
-					style={styles.textInput}
+					style={authStyles.textInput}
 				/>
-				<Pressable style={styles.button} onPress={() => login()}>
-					<Text style={styles.buttonText}>Log in</Text>
+				<Pressable style={authStyles.button} onPress={() => login()}>
+					<Text style={authStyles.buttonText}>Log in</Text>
 				</Pressable>
 			</View>
 			<Text>Don't have an account?</Text>
 			<Pressable onPress={() => setCurrState('signing-up')}>
 				<Text>Sign up</Text>
 			</Pressable>
-			<Pressable style={styles.button} onPress={() => setPage('sign-up')}>
-				<Text style={styles.buttonText}>Wait, I don't have an account</Text>
+			<Pressable style={authStyles.button} onPress={() => setPage('sign-up')}>
+				<Text style={authStyles.buttonText}>Wait, I don't have an account</Text>
 			</Pressable>
 		</View>
 	)
