@@ -4,11 +4,14 @@ export const zincText = '#d4d4d8'
 export const zincDark = '#27272a'
 export const zingBackground = '#52525b'
 
-export const landingStyles = StyleSheet.create({
+export const appStyles = StyleSheet.create({
 	appContainer: {
 		flex: 1,
 		backgroundColor: zingBackground,
 	},
+})
+
+export const landingStyles = StyleSheet.create({
 	landingPageContainer: {
 		flex: 1,
 		alignItems: 'center',
@@ -51,4 +54,55 @@ export const landingStyles = StyleSheet.create({
 	},
 })
 
-export const authStyles = StyleSheet.create({})
+export const authStyles = StyleSheet.create({
+	authPageContainer: {
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+	titleText: {
+		color: zincText,
+		fontSize: 40,
+		fontWeight: '600',
+		textAlign: 'center',
+		marginBottom: 20,
+	},
+	textInput: {
+		backgroundColor: zincDark,
+		fontSize: 16,
+		color: zincText,
+		padding: 10,
+		margin: 5,
+		borderRadius: 10,
+	},
+	authContainer: {
+		width: '80%',
+	},
+	authButtonView: {
+		marginTop: 25,
+		flexDirection: 'row',
+		justifyContent: 'center',
+	},
+	swapAuthButtonView: {
+		marginTop: 20,
+		flexDirection: 'row',
+		justifyContent: 'center',
+	},
+	authButton: {
+		borderRadius: 40,
+		padding: 10,
+		marginHorizontal: 10,
+		backgroundColor: zincDark,
+		width: '35%',
+	},
+	authText: {
+		color: zincText,
+		fontSize: 18,
+		fontWeight: '400',
+		textAlign: 'center',
+	},
+	swapAuthText: {
+		fontSize: 16,
+		fontWeight: '400',
+	},
+})

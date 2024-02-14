@@ -4,12 +4,12 @@ import { SafeAreaView } from 'react-native'
 import LandingPage from './sections/LandingPage'
 import LoginPage from './sections/LoginPage'
 import SignUpPage from './sections/SignUpPage'
-import styles from './globals'
+import { appStyles } from './globals'
 
 export default function App() {
 	const [page, setPage] = useState('landing')
 	return (
-		<SafeAreaView style={styles.appContainer}>
+		<SafeAreaView style={appStyles.appContainer}>
 			{page === 'landing' && <LandingPage setPage={setPage} />}
 			{page === 'dashboard' && <LandingPage setPage={setPage} />}
 			{page === 'login' && <LoginPage setPage={setPage} />}
