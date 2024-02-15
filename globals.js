@@ -2,12 +2,12 @@ import { StyleSheet } from 'react-native'
 
 export const zincText = '#d4d4d8'
 export const zincDark = '#27272a'
-export const zingBackground = '#52525b'
+export const zincBackground = '#52525b'
 
 export const appStyles = StyleSheet.create({
 	appContainer: {
 		flex: 1,
-		backgroundColor: zingBackground,
+		backgroundColor: zincBackground,
 	},
 })
 
@@ -106,3 +106,5 @@ export const authStyles = StyleSheet.create({
 		fontWeight: '400',
 	},
 })
+
+export const dashboardStyles = StyleSheet.create({})

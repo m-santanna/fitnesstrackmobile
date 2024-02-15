@@ -13,7 +13,7 @@ const LoginPage = ({ setPage }) => {
 	const [username, setUsername] = useState('')
 	const [password, setPassword] = useState('')
 	const login = () => {
-		console.log('logging in')
+		setPage('dashboard')
 	}
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss}>
