@@ -1,5 +1,5 @@
 import { View, Text, Pressable } from 'react-native'
-import { Calendar } from 'react-native-calendars'
+import { Calendar, Day } from 'react-native-calendars'
 import { useState } from 'react'
 import { zincDark, zincBackground, zincText, dashboardStyles } from '../globals'
 import { formatDate } from '../utils'
@@ -11,7 +11,10 @@ const DashboardPage = ({ setPage }) => {
 		<View style={{ flex: 1 }}>
 			<Calendar
 				onDayPress={(day) => setSelectedDay(day.dateString)}
-				style={{ borderRadius: 10, marginHorizontal: 15 }}
+				style={{
+					borderRadius: 10,
+					marginHorizontal: 15,
+				}}
 				markedDates={{
 					// needs adjustment
 					[trainedDays]: {
@@ -24,6 +27,16 @@ const DashboardPage = ({ setPage }) => {
 					},
 				}}
 				theme={{
+					'stylesheet.day.basic': {
+						// Can increase the width and height of each day
+						base: {
+							width: 36,
+							height: 36,
+							alignItems: 'center',
+							justifyContent: 'center',
+							borderRadius: 1000,
+						},
+					},
 					'stylesheet.dot': {
 						dot: {
 							width: 4,

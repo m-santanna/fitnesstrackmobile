@@ -8,7 +8,7 @@ import DashboardPage from './sections/DashboardPage'
 import { appStyles } from './globals'
 
 export default function App() {
-	const [page, setPage] = useState('landing')
+	const [page, setPage] = useState('dashboard')
 	return (
 		<SafeAreaView style={appStyles.appContainer}>
 			{page === 'landing' && <LandingPage setPage={setPage} />}
