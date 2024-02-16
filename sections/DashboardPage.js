@@ -1,12 +1,19 @@
 import { View, Text, Pressable } from 'react-native'
-import { Calendar, Day } from 'react-native-calendars'
+import { Calendar } from 'react-native-calendars'
 import { useState } from 'react'
 import { zincDark, zincBackground, zincText, dashboardStyles } from '../globals'
 import { formatDate } from '../utils'
 
 const DashboardPage = ({ setPage }) => {
-	const [selectedDay, setSelectedDay] = useState('')
-	const trainedDays = [formatDate(Date.now()), '2024-02-14'] // still testing
+	const today = formatDate(Date.now())
+	const [selectedDay, setSelectedDay] = useState(today)
+	const trainedDays = ['2024-02-12', '2024-02-14'] // just filler data for now
+
+	const trainedDatesObjects = trainedDays.reduce((obj, day) => {
+		obj[day] = { marked: true, dotColor: 'lime' }
+		return obj
+	}, {})
+
 	return (
 		<View style={{ flex: 1 }}>
 			<Calendar
@@ -16,11 +23,7 @@ const DashboardPage = ({ setPage }) => {
 					marginHorizontal: 15,
 				}}
 				markedDates={{
-					// needs adjustment
-					[trainedDays]: {
-						marked: true,
-						dotColor: 'lime',
-					},
+					...trainedDatesObjects,
 					[selectedDay]: {
 						selected: true,
 						disableTouchEvent: true,
@@ -72,10 +75,6 @@ const DashboardPage = ({ setPage }) => {
 					selectedDayTextColor: '#ffffff',
 				}}
 			/>
-			<Text>Dashboard!</Text>
-			<Pressable onPress={() => setPage('main')}>
-				<Text>Main</Text>
-			</Pressable>
 		</View>
 	)
 }
