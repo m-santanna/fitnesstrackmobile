@@ -25,7 +25,7 @@ const LandingPage = ({ setPage }) => {
 			{currState === 'show-options' && (
 				<>
 					<Text style={landingStyles.landingPageTitle}>
-						An account. Do you have one?
+						Do you have an account?
 					</Text>
 					<View style={{ flexDirection: 'row' }}>
 						<Pressable

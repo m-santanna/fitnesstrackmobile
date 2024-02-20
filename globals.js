@@ -3,6 +3,8 @@ import { StyleSheet } from 'react-native'
 export const zincText = '#d4d4d8'
 export const zincDark = '#27272a'
 export const zincBackground = '#52525b'
+export const red = '#B30000'
+export const green = '#008000'
 
 export const appStyles = StyleSheet.create({
 	appContainer: {
