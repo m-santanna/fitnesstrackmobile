@@ -1,4 +1,4 @@
-import { View, Text, Pressable } from 'react-native'
+import { View, Text, Pressable, TextInput } from 'react-native'
 import { Calendar } from 'react-native-calendars'
 import { useState } from 'react'
 import { zincDark, zincBackground, zincText, dashboardStyles } from '../globals'
@@ -75,6 +75,7 @@ const DashboardPage = ({ setPage }) => {
 					selectedDayTextColor: '#ffffff',
 				}}
 			/>
+			<TextInput />
 		</View>
 	)
 }
