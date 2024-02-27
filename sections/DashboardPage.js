@@ -75,7 +75,19 @@ const DashboardPage = ({ setPage }) => {
 					selectedDayTextColor: '#ffffff',
 				}}
 			/>
-			<TextInput />
+			<View>
+				<Text style={dashboardStyles.dashboardPageTitle}>Today's Workout</Text>
+				<TextInput
+					style={dashboardStyles.dashboardPageInput}
+					placeholder="What did you train today?"
+				/>
+				<Pressable
+					style={dashboardStyles.dashboardPageButton}
+					onPress={() => console.log('Save workout')}
+				>
+					<Text style={dashboardStyles.dashboardPageButtonText}>Save</Text>
+				</Pressable>
+			</View>
 		</View>
 	)
 }
