@@ -83,7 +83,7 @@ const DashboardPage = ({ setPage }) => {
 				/>
 				<Pressable
 					style={dashboardStyles.dashboardPageButton}
-					onPress={() => console.log('Save workout')}
+					onPress={() => console.log('test')}
 				>
 					<Text style={dashboardStyles.dashboardPageButtonText}>Save</Text>
 				</Pressable>
