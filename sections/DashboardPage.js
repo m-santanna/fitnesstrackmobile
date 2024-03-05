@@ -75,7 +75,7 @@ const DashboardPage = ({ setPage }) => {
 					selectedDayTextColor: '#ffffff',
 				}}
 			/>
-			<View>
+			<View style={{ flex: 1 }}>
 				<Text style={dashboardStyles.dashboardPageTitle}>Today's Workout</Text>
 				<TextInput
 					style={dashboardStyles.dashboardPageInput}
